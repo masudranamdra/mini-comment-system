@@ -1,83 +1,26 @@
-  // fast button
-        function changeblack(){
-            document.body.style.backgroundColor = 'orange';
-        }
+const btnsend = document.getElementById('commentsendbutton')
+    .addEventListener('click', function () {
 
 
-        const YellowColor = document.getElementById('tome')
-        YellowColor.onclick = function change(){
-            document.body.style.backgroundColor = 'lightyellow'
-        }
+        const inputFild = document.getElementById('commenttype');
+
+        // 2nd step
+        const tansfar = inputFild.value;
+
+        const valuset = document.getElementById('commentbox');
+
+        const cracetcommentElement = document.createElement('p');
+        // console.log(cracetcommentElement);
 
 
-        const skyblue1 = document.getElementById("skyBlue");
-        skyblue1.onclick = tobechange;
-        function tobechange (){
-            document.body.style.backgroundColor = 'skyblue';
-        }
+        // style
 
+        cracetcommentElement.classList.add('comment')
+        cracetcommentElement.innerText = tansfar;
 
+        const okodk = valuset.appendChild(cracetcommentElement)
+        console.log(okodk)
 
-        // add evenlessener
-         document.getElementById("nextevel").addEventListener("click",
-            function nextt (){
-               document.body.style.backgroundColor = 'lightblue';
-            }
-        )
+        inputFild.value = '';
 
-        document.getElementById("nextevel1").addEventListener('click',
-        function (){
-            document.body.style.backgroundColor = 'lightgreen'
-        }
-      )
-
-      document.getElementById('nextgold').addEventListener('click',
-        function (){
-            document.body.style.color = 'green';
-        }
-      )
-
-
-    //   add eventhandler 
-    document.getElementById('changetitle').addEventListener('click',
-        function changelit (){
-            const update = document.getElementById('haddingH');
-            update.innerText = 'No Change Your Color'
-        }
-       )
-
-
-       document.getElementById('changetitle').addEventListener('click',
-        function changelit (){
-            const update = document.getElementById('haddingH');
-            update.style.color = 'blue'
-        }
-       )
-
-
-     document.getElementById("divabutton").addEventListener('click',
-        function(){
-            const nameinput = document.getElementById('divainput')
-            // console.log(nameinput)
-            const name = nameinput.value;
-
-            const changeName = document.getElementById('divaname');
-            changeName.innerText = name;
-        }
-       )
-
-
-
-    //    next
-    const secound = document.getElementById('divbbutton').addEventListener('click',
-            function (){
-                const changbuttons = document.getElementById('divbinput')
-                // console.log(changbuttons);
-                const nextl = changbuttons.value;
-
-                // console.log(nextl);
-                const comebaby = document.getElementById('divbhading');
-                console.log(comebaby);
-                comebaby.innerText = nextl;
-            }
-        )
+    })
